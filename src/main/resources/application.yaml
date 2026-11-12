@@ -1,0 +1,18 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+          model: llama3.2
+      embedding:
+          model: nomic-embed-text
+    vectorstore:
+      pgvector:
+        dimensions: 768
+        distance-type: COSINE_DISTANCE
+        index-type: HNSW
+        initialize-schema: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rag
+    username: postgres
+    password: postgres
